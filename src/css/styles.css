@@ -1,0 +1,33 @@
+.navbar navbar-expand-sm bg-light{
+    background-color: rgb(8, 10, 6);
+}
+
+.Fh {
+    font-family:'Trebuchet MS';
+    font-size: 300%;
+}
+
+.lemons {
+    font-family: 'Lucida Sans Unicode';
+    font-size: 150%;
+}
+
+.nav {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.fuenteArial {
+    font-family: Arial;
+}
+
+.Kursiva {
+    font-style: italic;
+}
+.imagen{
+    height: 250px !important;
+    width: 250px !important;
+}
+
+

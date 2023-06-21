@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="css/styles.css"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript">
+
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "Fannyviveros82@gmail.com",
+        Password: "B3B72F1621D6133F37CC0515F7EC00450E63",
+        To: 'Fannyviveros82@gmail.com',
+        From: "Fannyviveros82@gmail.com",
+        Subject: "Sending Email ",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+  </script>
+
+
+</head>
+
+<body>
+  <div id="page-container">
+    <div id="content-wrap">
+      <header id="header">
+        <nav id="navbar">
+          <nav class="navbar navbar-expand-sm navbar-dark fixed-top"
+            style="background-color: rgba(245, 78, 78, 0.925);">
+            <header class="container-fluid">
+              <a>
+                <a href="https://www.themealdb.com" id="logo-header">
+                  <img src="https://www.themealdb.com/images/logo-small.png" alt="logo-MealDb" />
+                </a>
+
+                <!-- Boton tipo hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: rgb(0, 0, 0);" href="">Desayuno</a>
+
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: rgb(0, 0, 0);" href="">Comida</a>
+
+                  </ul>
+                  <button id="btn-aleatorio">Aleatorio</button>
+
+                </div>
+          </nav>
+        </nav>
+      </header>
+
+
+      <!-- BUSCADOR Y BOTON-->
+      <br><br>
+
+      <div class="centered-search">
+        <div class="header-search">
+          <div class="container mt-5">
+            <div class="row text-center justify-content-center">
+              <h3>TIENES HAMBRE?</h3>
+              <div class="contenedor-input">
+                <div class="input-group mb-3">
+                  <input type="text" id="searchInput" placeholder="Buscar una comida..."
+                    class="form-control rounded-pill me-3" style="border: solid 3px #be1212"
+                    aria-label="Recipient's username" aria-describedby="button-addon2" />
+                  <button type="submit" class="btn rounded-pill w-15 text-white" style="background-color: #000000"
+                    id="searchButton">Buscar!!</button>
+
+                </div>
+                <div id="results"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row" id="container_meals">
+          <label id="nombre_comida"></label>
+          <img id="imagenComida" src="" class="imagen">
+          <div>
+            <h1></h1>
+            <label id="descripcion"></label> <br>
+            <h1></h1>
+            <ul id="ingredientes_contenedor"></ul>
+          </div>
+          <iframe id="video" width="420" height="315" src="">
+          </iframe>
+        </div>
+
+        <div class="row">
+          <div class="col p-3 bg-primary text-white" style="background-color: rgb(163, 231, 236) !important;">
+            <center>
+              <figure>
+                <img width="220" height="220"
+                  src="img/25-recetas-de-tupper-para-preparar-el-dia-antes_afc5e2b6_230208170301_900x900.png" alt="">
+              </figure>
+            </center>
+          </div>
+
+
+          <!-- TITILO Y PARRAFOS DE NUESTRA PAGINA-->
+          <div class="col p-3 bg-dark text-brack" style="background-color: rgb(163, 231, 236) !important;">
+            <H3> BIENVENIDOS :D </H3>
+            <H4>Aqui puedes encontrar de todo tipo de comida</H4>
+            <p>Estefania Viveros Ambriz</p>
+            <p>Rocio Yahuaca Mata</p>
+            <p>Ramon Avalos Esquivel</p>
+          </div>
+
+          <!-- FORMULARIO DE REGISTRO-->
+          <div class="col p-3 bg-primary text-brack" style="background-color: rgb(163, 231, 236) !important;">
+            <center>
+              <figure>
+                <footer class="footer">
+                  <form class="seccionarfooter">
+                    <div class="container mt-3">
+                      <Center>
+                        <h4>PONTE EN CONTACTO</h4>
+                        <form action="enviar_correo.php" method="POST">
+
+                          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
+
+                          <input type="number" id="number" name="number" placeholder="Telefono" required><br><br>
+
+                          <input type="correo" id="correo" name="uncorreo" placeholder="Correo electronico" required
+                            style="font-size: 100%"><br><br>
+                          <button type="submit" class="color btn-danger" class="btn rounded-pill w-15">Enviar</button>
+                      </Center>
+                  </form>
+          </div>
+          </footer>
+        </div>
+
+      </div>
+      <script src="js/index.js"></script>
+      <script src="js/menu.js"></script>
+</body>
+
+</html>
